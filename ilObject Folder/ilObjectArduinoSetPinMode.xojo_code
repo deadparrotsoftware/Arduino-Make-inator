@@ -1,24 +1,6 @@
 #tag Class
-Protected Class ilObjectPortalDestination
+Protected Class ilObjectArduinoSetPinMode
 Inherits ilObjectBase
-	#tag Event
-		Sub GenerateAndroidCode(theOrigin as string)
-		  dim s as string
-		  
-		  s = "public void " + GetCodeName + "()" + EndOfLine
-		  
-		  s = s + "{" + EndOfLine
-		  
-		  s = s + "//" + GetCodeName + "Arrived" + EndOfLine
-		  
-		  s = s + "}" + EndOfLine + EndOfLine
-		  
-		  setCodeToCallThisObjectForName("Arrived", GetCodeName + "();")
-		  
-		  AndroidInsertCodeAtMarker(s, "//EndOfFunctions")
-		End Sub
-	#tag EndEvent
-
 	#tag Event
 		Sub GenerateArduinoCode(theOrigin as string, optional theTarget as integer)
 		  dim s as string
@@ -27,84 +9,15 @@ Inherits ilObjectBase
 		  
 		  s = s + "{" + EndOfLine
 		  
-		  s = s + "//" + GetCodeName + "Arrived" + EndOfLine
+		  s = s + "pinMode(" + modVariables.VariableObjectFromName(MathVariable1).ISCArduinoName +", " + OriginVariable + ");" + EndOfLine
+		  
+		  s = s + "//" + GetCodeName + "Done" + EndOfLine
 		  
 		  s = s + "}" + EndOfLine + EndOfLine
 		  
-		  setCodeToCallThisObjectForName("Arrived", GetCodeName + "();")
+		  setCodeToCallThisObjectForName("Set", GetCodeName + "();")
 		  
 		  ArduinoInsertCodeAtMarker(s, "//EndOfFunctions")
-		End Sub
-	#tag EndEvent
-
-	#tag Event
-		Sub GenerateFlexWebCode(theOrigin as string)
-		  dim s as string
-		  
-		  s = "private function " + GetCodeName + "():void" + EndOfLine
-		  
-		  s = s + "{" + EndOfLine
-		  
-		  s = s + "//" + GetCodeName + "Arrived" + EndOfLine
-		  
-		  s = s + "}" + EndOfLine + EndOfLine
-		  
-		  setCodeToCallThisObjectForName("Arrived", GetCodeName + "();")
-		  
-		  FlexWebInsertCodeAtMarker(s, "//EndOfFunctions")
-		  
-		  
-		End Sub
-	#tag EndEvent
-
-	#tag Event
-		Sub GenerateiOSCode(theOrigin as string)
-		  dim s as string
-		  
-		  s = s + "- (void) " + GetCodeName + " {" + EndOfLine
-		  
-		  s = s + "//" + GetCodeName + "Arrived" + EndOfLine
-		  s = s + "" + EndOfLine
-		  s = s + "}" + EndOfLine + EndOfLine
-		  
-		  setCodeToCallThisObjectForName("Arrived", "[self " + GetCodeName + "];")
-		  
-		  iOSMInsertCodeAtMarker(s, "//EndOfFunctions")
-		End Sub
-	#tag EndEvent
-
-	#tag Event
-		Sub GenerateJavaScriptWebCode(theOrigin as string, optional theTarget as integer)
-		  dim s as string
-		  
-		  s = "function " + GetCodeName + "()" + EndOfLine
-		  
-		  s = s + "{" + EndOfLine
-		  
-		  s = s + "//" + GetCodeName + "Arrived" + EndOfLine
-		  
-		  s = s + "}" + EndOfLine + EndOfLine
-		  
-		  setCodeToCallThisObjectForName("Arrived", GetCodeName + "();")
-		  
-		  HTML5InsertCodeAtMarker(s, "//EndOfFunctions")
-		  
-		End Sub
-	#tag EndEvent
-
-	#tag Event
-		Sub GeneratePythonDesktopCode(theOrigin as string)
-		  dim s as string
-		  
-		  s = "def " + GetCodeName + "():" + EndOfLine
-		  
-		  s = s + " #" + GetCodeName + "Arrived" + EndOfLine + EndOfLine
-		  
-		  setCodeToCallThisObjectForName("Arrived", GetCodeName + "()")
-		  
-		  PythonInsertCodeAtMarker(s, "#EndOfFunctions")
-		  
-		  
 		End Sub
 	#tag EndEvent
 
@@ -114,16 +27,23 @@ Inherits ilObjectBase
 		  // Calling the overridden superclass constructor.
 		  Super.Constructor
 		  
-		  me.CodeNameBase = "iscPortalDestination"
-		  me.BGColor =  frmProject.kcolLogic
-		  me.DisplayName = "Destination Portal"
-		  me.DisplayCategory = "Logic"
-		  me.Title = "Destination Portal"
+		  me.CodeNameBase = "iscArduinoSetPinMode"
+		  me.BGColor =  frmProject.kcolUserInterface
+		  me.DisplayName = "Set PinMode"
+		  me.DisplayCategory = "Arduino"
+		  me.Title = "Set PinMode"
 		  me.Width = 90
 		  
-		  me.ObjectItems.Append "Arrived"
+		  me.ObjectItems.Append "Set"
+		  me.ObjectShowInput.Append true
+		  me.ObjectShowOutput.Append false
+		  
+		  me.ObjectItems.Append "Done"
 		  me.ObjectShowInput.Append false
-		  me.ObjectShowOutput.Append True
+		  me.ObjectShowOutput.Append true
+		  
+		  //RequireOriginVariable = true
+		  RequireMathVariable1 = true
 		  
 		End Sub
 	#tag EndMethod

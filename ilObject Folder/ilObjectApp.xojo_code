@@ -175,7 +175,7 @@ Inherits ilObjectBase
 		  if modVariables.projectVariables.Ubound >= 0 then
 		    for i = 0 to modVariables.projectVariables.Ubound
 		      if modVariables.projectVariables(i).Type = "Number" then
-		        s = s + "int " + modVariables.projectVariables(i).ISCArduinoName + ";" + EndOfLine
+		        s = s + "int " + modVariables.projectVariables(i).ISCArduinoName + " = " + PythonEscapeString(modVariables.projectVariables(i).DefaultVal) + ";" + EndOfLine
 		      end if
 		      
 		    next

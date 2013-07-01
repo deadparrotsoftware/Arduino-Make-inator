@@ -57,7 +57,7 @@ Begin Window frmProject
       LockRight       =   False
       LockTop         =   True
       RequiresSelection=   False
-      Scope           =   0
+      Scope           =   "0"
       ScrollbarHorizontal=   False
       ScrollBarVertical=   True
       SelectionType   =   0
@@ -93,7 +93,7 @@ Begin Window frmProject
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
@@ -112,8 +112,10 @@ Begin Window frmProject
       InitialParent   =   ""
       Left            =   0
       LockedInPosition=   False
-      Scope           =   0
-      TabPanelIndex   =   "0"
+      Scope           =   "0"
+      TabIndex        =   2
+      TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   -75
       Visible         =   True
       Width           =   830
@@ -136,7 +138,7 @@ Begin Window frmProject
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
@@ -164,10 +166,11 @@ Begin Window frmProject
       LockRight       =   False
       LockTop         =   True
       Multiline       =   False
-      Scope           =   0
+      Scope           =   "0"
       Selectable      =   False
       TabIndex        =   7
       TabPanelIndex   =   0
+      TabStop         =   True
       Text            =   "Variables:"
       TextAlign       =   0
       TextColor       =   &c00000000
@@ -181,16 +184,20 @@ Begin Window frmProject
       Width           =   100
    End
    Begin Timer timeFirstRun
-      Height          =   32
-      Index           =   -2147483648
+      Enabled         =   True
+      Height          =   "32"
+      Index           =   
       Left            =   -59
       LockedInPosition=   False
       Mode            =   1
       Period          =   500
-      Scope           =   0
-      TabPanelIndex   =   "0"
+      Scope           =   "0"
+      TabIndex        =   5
+      TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   454
-      Width           =   32
+      Visible         =   True
+      Width           =   "32"
    End
    Begin Canvas canScroller
       AcceptFocus     =   False
@@ -210,7 +217,7 @@ Begin Window frmProject
       LockLeft        =   True
       LockRight       =   True
       LockTop         =   True
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   8
       TabPanelIndex   =   0
       TabStop         =   True
@@ -239,7 +246,7 @@ Begin Window frmProject
          LockLeft        =   False
          LockRight       =   False
          LockTop         =   False
-         Scope           =   0
+         Scope           =   "0"
          TabIndex        =   0
          TabPanelIndex   =   0
          TabStop         =   True
@@ -269,7 +276,7 @@ Begin Window frmProject
       Maximum         =   100
       Minimum         =   0
       PageStep        =   20
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   9
       TabPanelIndex   =   0
       TabStop         =   True
@@ -297,7 +304,7 @@ Begin Window frmProject
       Maximum         =   100
       Minimum         =   0
       PageStep        =   20
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   10
       TabPanelIndex   =   0
       TabStop         =   True
@@ -307,16 +314,20 @@ Begin Window frmProject
       Width           =   434
    End
    Begin Timer timeNav
-      Height          =   32
-      Index           =   -2147483648
+      Enabled         =   True
+      Height          =   "32"
+      Index           =   
       Left            =   -59
       LockedInPosition=   False
       Mode            =   0
       Period          =   500
-      Scope           =   0
-      TabPanelIndex   =   "0"
+      Scope           =   "0"
+      TabIndex        =   9
+      TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   304
-      Width           =   32
+      Visible         =   True
+      Width           =   "32"
    End
    Begin Label lblInfo
       AutoDeactivate  =   True
@@ -336,10 +347,11 @@ Begin Window frmProject
       LockRight       =   False
       LockTop         =   False
       Multiline       =   False
-      Scope           =   0
+      Scope           =   "0"
       Selectable      =   False
       TabIndex        =   11
       TabPanelIndex   =   0
+      TabStop         =   True
       Text            =   ""
       TextAlign       =   0
       TextColor       =   &c00000000
@@ -384,7 +396,7 @@ Begin Window frmProject
       LockRight       =   False
       LockTop         =   True
       RequiresSelection=   False
-      Scope           =   0
+      Scope           =   "0"
       ScrollbarHorizontal=   False
       ScrollBarVertical=   True
       SelectionType   =   0
@@ -431,7 +443,7 @@ Begin Window frmProject
       LockRight       =   False
       LockTop         =   False
       MenuValue       =   0
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   15
       TabPanelIndex   =   0
       TabStop         =   True
@@ -475,7 +487,7 @@ Begin Window frmProject
       LockRight       =   False
       LockTop         =   False
       MenuValue       =   0
-      Scope           =   0
+      Scope           =   "0"
       TabIndex        =   16
       TabPanelIndex   =   0
       TabStop         =   True
@@ -490,16 +502,20 @@ Begin Window frmProject
       Width           =   22
    End
    Begin Timer timeMap
-      Height          =   32
-      Index           =   -2147483648
+      Enabled         =   True
+      Height          =   "32"
+      Index           =   
       Left            =   -59
       LockedInPosition=   False
       Mode            =   0
       Period          =   1000
-      Scope           =   0
-      TabPanelIndex   =   "0"
+      Scope           =   "0"
+      TabIndex        =   14
+      TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   530
-      Width           =   32
+      Visible         =   True
+      Width           =   "32"
    End
 End
 #tag EndWindow
@@ -1263,6 +1279,23 @@ End
 		  if ObjectType = "AppLoop" then
 		    tempObj = new ilObjectAppLoop
 		  end if
+		  
+		  if ObjectType = "Delay" then
+		    tempObj = new ilObjectArduinoDelay
+		  end if
+		  
+		  if ObjectType = "Digital Read" then
+		    tempObj = new ilObjectArduinoDigitalRead
+		  end if
+		  
+		  if ObjectType = "Digital Write" then
+		    tempObj = new ilObjectArduinoDigitalWrite
+		  end if
+		  
+		  if ObjectType = "Set PinMode" then
+		    tempObj = new ilObjectArduinoSetPinMode
+		  end if
+		  
 		  
 		  'if frmProject.popCategory.Text = "Custom" then
 		  if InStr(ObjectType, "Custom///***///") > 0 then
@@ -2501,8 +2534,8 @@ End
 		  if popCategory.Text = "Arduino" then
 		    colorBlockList = kcolText
 		    listObjects.AddRow "Set PinMode"
-		    listObjects.AddRow "DigitalRead"
-		    listObjects.AddRow "DigitalWrite"
+		    listObjects.AddRow "Digital Read"
+		    listObjects.AddRow "Digital Write"
 		    listObjects.AddRow "Delay"
 		    
 		  end if
@@ -3170,6 +3203,26 @@ End
 		  
 		  if theObject isa ilObjectAnimationShake then
 		    conProperties = new conUIAnimationShake
+		    conProperties.EmbedWithin(canCon,0,0)
+		  end if
+		  
+		  if theObject isa ilObjectArduinoDelay then
+		    conProperties = new conArduinoDelay
+		    conProperties.EmbedWithin(canCon,0,0)
+		  end if
+		  
+		  if theObject isa ilObjectArduinoDigitalRead then
+		    conProperties = new conArduinoDigitalRead
+		    conProperties.EmbedWithin(canCon,0,0)
+		  end if
+		  
+		  if theObject isa ilObjectArduinoDigitalWrite then
+		    conProperties = new conArduinoDigitalWrite
+		    conProperties.EmbedWithin(canCon,0,0)
+		  end if _
+		  
+		  if theObject isa ilObjectArduinoSetPinMode then
+		    conProperties = new conArduinoSetPinMode
 		    conProperties.EmbedWithin(canCon,0,0)
 		  end if
 		  

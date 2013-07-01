@@ -22,6 +22,26 @@ Inherits ilObjectBase
 	#tag EndEvent
 
 	#tag Event
+		Sub GenerateArduinoCode(theOrigin as string, optional theTarget as integer)
+		  dim s as string
+		  
+		  s = "void " + GetCodeName + "()" + EndOfLine
+		  
+		  s = s + "{" + EndOfLine
+		  
+		  s = s + GetDestinationCall(OriginVariable) + EndOfLine
+		  
+		  s = s + "//" + GetCodeName + "Done" + EndOfLine
+		  
+		  s = s + "}" + EndOfLine + EndOfLine
+		  
+		  setCodeToCallThisObjectForName("Depart", GetCodeName + "();")
+		  
+		  ArduinoInsertCodeAtMarker(s, "//EndOfFunctions")
+		End Sub
+	#tag EndEvent
+
+	#tag Event
 		Sub GenerateFlexWebCode(theOrigin as string)
 		  dim s as string
 		  

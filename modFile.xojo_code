@@ -549,7 +549,7 @@ Protected Module modFile
 		  iscType.Extensions = "armi"
 		  f=GetOpenFolderItem(iscType)
 		  If f <> Nil then
-		    if Lowercase(right(f.Name, 4)) = ".armi" then
+		    if Lowercase(right(f.Name, 5)) = ".armi" then
 		      LoadProject(f)
 		    end if
 		  End if
