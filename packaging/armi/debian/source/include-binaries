@@ -1,0 +1,8 @@
+man/armi.1.gz
+install/usr/bin/armi
+install/opt/RadicalBreeze/armi/armi Libs/libRBAppearancePak.so
+install/opt/RadicalBreeze/armi/armi Libs/libRBShell.so
+install/opt/RadicalBreeze/armi/armi Libs/RBGUIFramework.so
+install/opt/RadicalBreeze/armi/armi Libs/libREALSQLDatabase.so
+install/opt/RadicalBreeze/armi/Examples/ButtonLight.armi
+install/opt/RadicalBreeze/armi/armi

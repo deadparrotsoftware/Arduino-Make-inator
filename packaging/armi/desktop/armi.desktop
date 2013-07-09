@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Arduino-Make-inator
+GenericName=Arduino-Make-inator
+Comment=Visually build logic for your Arduino board.
+Exec=armi %F
+Icon=armi
+Terminal=false
+Categories=Development;IDE;

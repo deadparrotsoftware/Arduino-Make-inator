@@ -1,0 +1,31 @@
+# Maintainer: Bob Mottram (4096 bits) <bob@robotics.uk.to>
+pkgname=armi
+pkgver=13.07
+pkgrel=1
+pkgdesc="Drag and drop some colorful blocks and link them up to tell your Arduino board what to do."
+arch=('i686' 'x86_64')
+url="https://github.com/BryanLunduke/Arduino-Make-inator"
+license=('GPL2')
+groups=()
+depends=( 'glibc' 'expat' 'glib2' 'gtk2')
+makedepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=($pkgname-$pkgver.tar.gz)
+noextract=()
+md5sums=(d64f2cffcd7fccb7f4788c015dab2e71)
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+  ./configure --prefix=/usr
+  make
+}
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  make DESTDIR="$pkgdir/" install
+}
