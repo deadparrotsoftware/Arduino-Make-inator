@@ -1,0 +1,15 @@
+Source: armi
+Priority: extra
+Maintainer: Bob Mottram (4096 bits) <bob@robotics.uk.to>
+Build-Depends: debhelper (>= 9.0.0), build-essential, libc6 (>=2.3), libexpat1 (>=1.95.8), libglib2.0-0 (>=2.2.0), libgtk2.0-0 (>=2.2.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/BryanLunduke/Arduino-Make-inator
+Vcs-Git: https://github.com/Bitmessage/PyBitmessage.git
+
+Package: armi
+Section: devel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libc6 (>=2.3), libexpat1 (>=1.95.8), libglib2.0-0 (>=2.2.0), libgtk2.0-0 (>=2.2.0)
+Description: Visually build logic for your Arduino board.
+ Drag and drop some colorful blocks and link them up to tell your Arduino
+ board what to do.
